@@ -20,6 +20,7 @@ public class TheyyamRunner {
 		theyyamDto.setBelongsFamilyName("Thiyyar");
 		theyyamDto.setOriginatedPeriods("Neolithic");
 		theyyamDto.setDevoteeOf("Lord Vishnu");
+		service.save(theyyamDto);
 		
 		System.out.println("Inserting the values in Runner");
 		
