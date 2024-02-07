@@ -1,0 +1,43 @@
+1) JDBC is the API in which it performs the java programming language.
+   
+3)                                    Statement
+       >> it is interface and it complies many times and excutes or running many times.
+       >> it extends Interface.
+       >> it present the package of (java.sql).
+       >> synatx is Statement statment=connection.Statement(null,null,null).
+        ____________________________________________________________________________________________
+                                  PreparedStatment
+
+       >> it is the interface in which it complies one time and it executes many times.
+       >> it extends the Statement.
+       >> it is also present in the package of (java.sql).
+       >> syntax is PreparedStatment preparedstatement=connection.PreparedStatment(null,null,null);
+
+4)    import java.util.Connection;
+      import java.sql.DriverManager;
+   public static void main(String[] args){
+     Class.forName("com.mysql.cj.jdbc.Driver");
+   Connection con = DriverManager.getConnection(ConnectionData.URl.getValue(),
+                                   ConnectionData.USERNAME.getValue(),
+                                  ConnectionData.PASSWORD.getValue());
+
+5) public class JdbcDelete {
+	public static void main(String[] args) {
+         String query="DELETE * jdbc_table WHERE uname=value1";
+      try(Collection con=DriverManager.getConnection(ConnectionData.URl.getValue(),
+                                   ConnectionData.USERNAME.getValue(),
+                                  ConnectionData.PASSWORD.getValue());
+   try(PreparedStatement preparedstatement=con.preparedstatement(query)){
+        System.out.println("Sucessfully Connected");
+      preparedStatement.setString(1,"sh");
+      preparedStatement.executeUpdate(); 
+    int rowsaffected=statement.executeUpdate(query);  
+   
+    }catch(SQLDataException e){
+     System.out.println("Not Sucessfully connected");
+     e.printStackTrace();
+
+6)  
+
+
+
