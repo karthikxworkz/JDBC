@@ -12,7 +12,7 @@ public class TheyyamRepositoryImplemenatation implements TheyyamRepository {
 
 	@Override
 	public boolean onSave(TheyyamDto theyyamDto) {
-		String query = "Insert Into theyyam_Table(theyyam_Id,origin,Country,typesOfTheyyam,anotherName,startMonth,endMonth,belongsFamilyName,originatedPeriods,devoteeOf) Values(?,?,?,?,?,?,?,?,?,?)";
+		String query = "Insert Into theyyam_Table(theyyam_Id,origin,Country,typesOfTheyyam,anotherName,startMonth,endMonth,belongsFamilyName,originatedPeriods,devoteeOf) Values(?,?,?,?,?,?,?,?,?,?,?)";
 		try (Connection connection = DriverManager.getConnection(ConnectionData.URl.getValue(),
 				ConnectionData.USERNAME.getValue(), ConnectionData.PASSWORD.getValue());
 				PreparedStatement preparedStatement = connection.prepareStatement(query)) {
